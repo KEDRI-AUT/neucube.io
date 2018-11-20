@@ -1,0 +1,23 @@
+<table class="uk-table uk-table-responsive">
+    <tbody>
+        {{ range . }}
+            {{ if or ( .current ) ( eq (lower .to) "present" ) }}
+                <tr class="gol-tr-bgcolor">
+                    <td>{{ .from }} - {{ .to }}</td>
+                    <td>
+                        {{ .title }}
+                        <p>{{ if .company }}{{ .company }},{{ end }} {{ .where }}</p>
+                    </td>
+                </tr>
+            {{ else }}
+                <tr>
+                    <td>{{ .from }} - {{ .to }}</td>
+                    <td>
+                        {{ .title }}
+                        <p>{{ if .company }}{{ .company }},{{ end }} {{ .where }}</p>
+                    </td>
+                </tr>
+            {{ end }}
+        {{ end }}
+    </tbody>
+</table>

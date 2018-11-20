@@ -1,0 +1,14 @@
+<script type="application/ld+json">
+    {
+        "url":"{{ .Permalink }}",
+        "name":"{{ .Site.Title }}",
+        "description":"{{ .Params.description }}",
+        {{ if (isset .Params "images") }}
+        "image":"{{ (index .Params.images 0) | absURL }}",
+        {{ else }}
+        "image":"{{ .Site.Params.thumbnailUrl | absURL }}",
+        {{ end }}
+        "@context":"http://schema.org",
+        "@type":"WebSite"
+    }
+</script>

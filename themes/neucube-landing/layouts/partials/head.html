@@ -1,0 +1,53 @@
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title>{{ if ne .Site.Title .Title }}{{.Title}} &mdash; {{ end }}{{.Site.Title}}</title>
+
+<meta name="robots" content="index, follow">
+
+{{ if (isset .Params "externalurl") }}
+<meta http-equiv="refresh" content="2;url={{ .Params.externalurl }}" />
+{{ end }}
+
+<link rel="shortcut icon" href="{{`favicon.ico` | relURL}}">
+
+<link rel="canonical" href="{{ .Permalink }}"/>
+<link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ .Site.Title }}" href="{{ `index.xml` | absURL }}" />
+
+<meta name="description" content="{{ .Params.description }}"/>
+<meta itemprop="description" content="{{ .Params.description }}"/>
+
+{{- partial "schemaSEO.html" . -}}
+
+{{ if (isset .Params "images") }}
+  <meta itemprop="thumbnailUrl" content="{{ (index .Params.images 0) | absURL }}"/>
+{{ else }}
+  <meta itemprop="thumbnailUrl" content="{{ .Site.Params.thumbnailUrl | absURL }}"/>
+{{ end }}
+
+{{ if or .Params.noindex (isset .Params "externalurl") }}
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+{{end}}
+
+{{ template "_internal/google_analytics_async.html" . }}
+{{ template "_internal/google_news.html" . }}
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/schema.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+{{ with resources.Get "css/uikit.css" }}
+    <style>
+        {{ .Content | safeCSS }}
+    </style>
+{{end}}
+
+{{ $sassTemplate := resources.Get "scss/custom.scss" }}
+{{ $style := $sassTemplate | resources.ExecuteAsTemplate "main.scss" . | resources.ToCSS }}
+<style>
+  {{ $style.Content | safeCSS }}
+</style>
+

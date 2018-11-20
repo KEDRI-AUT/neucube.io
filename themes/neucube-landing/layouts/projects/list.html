@@ -1,0 +1,25 @@
+{{ define "main" }}
+
+<div class="uk-section uk-section-default" uk-height-viewport="offset-bottom: 32">
+    <div class="uk-container uk-container-xsmall uk-text-justify">
+
+        {{ range .Data.Pages.GroupByParam "projectcategory" }}
+        <h2>{{.Key}}</h2>
+        <ul class="uk-list gol-links">
+            {{ range .Pages }}
+            <li>
+                {{ if (isset .Params "externalurl") }}
+                    <a href="{{ .Params.externalurl }}">{{ .Title }}</a>
+                {{ else }}
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                {{ end }}
+            </li>
+            {{ end }}
+        </ul>
+        {{ end }}
+
+    </div>
+</div>
+
+
+{{end}}

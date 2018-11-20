@@ -1,0 +1,53 @@
+<!-- {{ if eq (getenv "HUGO_ENV") "production" }}
+    <script src="{{ `js/uikit.min.js` | relURL}}"></script>
+    <script src="{{ `js/uikit-icons.min.js` | relURL}}"></script>
+{{else}}
+    <script src="{{ `js/uikit.js` | relURL}}"></script>
+    <script src="{{ `js/uikit-icons.js` | relURL}}"></script>
+{{end}} -->
+
+{{ with resources.Get "js/uikit.js" }}
+    <script>
+        {{ .Content | safeJS }}
+    </script>
+{{end}}
+
+{{ with resources.Get "js/uikit-icons.js" }}
+    <script>
+        {{ .Content | safeJS }}
+    </script>
+{{end}}
+
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.2"></script>
+<script>
+    const search = instantsearch({
+    appId: '{{.Site.Params.algoliaAppId}}',
+    apiKey: '{{.Site.Params.algoliaApiKey}}',
+    indexName: '{{.Site.Params.algoliaIndexName}}',
+    routing: true,
+    searchParameters: {
+        hitsPerPage: 5
+    },
+    searchFunction: function (helper) {
+        if (helper.state.query === '') {
+            if (document.getElementById("hits") != null) {
+                document.querySelector('#hits').innerHTML = 'Type to search...';
+            }
+            if (document.getElementById("hits-sidenav") != null) {
+                document.querySelector('#hits-sidenav').innerHTML = 'Type to search...';
+            }
+            return;
+        }
+        helper.search();
+    }
+});
+</script>
+{{ with resources.Get "js/custom.js" }}
+    <script>
+        {{ .Content | safeJS }}
+    </script>
+{{end}}
+
+{{ if .Params.ads }}
+    {{- partial "ads.html" . -}}
+{{ end }}

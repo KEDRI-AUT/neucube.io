@@ -1,10 +1,9 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-draft: true
-categories: []
+draft: false
+projectCategory: ""
 tags: []
 description: ""
 images: []
-ads: false
 ---

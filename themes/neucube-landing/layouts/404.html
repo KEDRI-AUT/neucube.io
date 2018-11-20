@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {{- partial "head.html" . -}}
+</head>
+<body>
+<div class="uk-height-viewport uk-background-cover uk-background-primary uk-overflow-hidden uk-light uk-flex uk-flex-top"
+    style="background: #1d1f21">
+    <div class="uk-width-1-2@xl uk-text-center uk-margin-auto uk-margin-auto-vertical">
+        <h1>404!</h1>
+
+        <ul class="uk-subnav uk-subnav-divider uk-flex-center uk-visible@m gol-subnav">
+            {{ range .Site.Menus.main }}
+                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
+        <p>The page you are looking for cannot be found.</p>
+    </div>
+</div>
+
+
+<!--search console-->
+<div class="uk-position-medium uk-position-top-right uk-visible@m">
+    <a class="uk-search-toggle" uk-search-icon href="#"></a>
+    <div class="uk-drop" uk-drop="mode: click; pos: left-center; offset: 0">
+        <form class="uk-search uk-search-navbar uk-width-1-1">
+            <input class="uk-search-input" type="search" placeholder="Search..." autofocus>
+        </form>
+    </div>
+</div>
+<!--end search console-->
+
+<!--menu toggle-->
+<a class="uk-position-medium uk-position-top-right uk-hidden@m" href="#offcanvas" uk-navbar-toggle-icon uk-toggle></a>
+<div id="offcanvas" uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <ul class="uk-nav uk-nav-default">
+            {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
+
+    </div>
+</div>
+<!--end menu toggle-->
+
+{{ partial "scripts.html" . }}
+</body>
+
+</html>

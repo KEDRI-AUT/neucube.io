@@ -1,0 +1,13 @@
+<table class="uk-table uk-table-responsive">
+    <tbody>
+        {{ range sort . "from" "desc" }}
+            <tr>
+                <td>{{.from}} - {{.to}}</td>
+                <td>
+                    {{.title}}
+                    <p>{{if .company }}{{.company}},{{end}} {{.where}}</p>
+                </td>
+            </tr>
+        {{ end }}
+    </tbody>
+</table>

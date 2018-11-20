@@ -1,0 +1,102 @@
+<!doctype html>
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:website="http://ogp.me/ns/website" lang="en" itemscope itemtype="http://schema.org/WebPage">
+
+<head>
+    {{- partial "head.html" . -}}
+</head>
+<body>
+<div class="uk-height-viewport uk-background-cover uk-background-primary uk-overflow-hidden uk-light uk-flex uk-flex-top"
+    style="background: {{ .Site.Params.scss.backgroundColor }}">
+    <div class="uk-width-1-2@xl uk-text-center uk-margin-auto uk-margin-auto-vertical">
+        <h1 hidden>{{ .Title }}</h1>
+        {{ if .Site.Params.logoSVG }}
+            <img data-src="{{ .Site.Params.logoSVG | relURL }}" alt="{{ .Site.Title }}" width="400" height="100" uk-svg>
+        {{ else if .Site.Params.logo }}
+            <img data-src="{{ .Site.Params.logoSVG | relURL }}" alt="{{ .Site.Title }}" width="400" height="100" uk-img>
+        {{ else if .Site.Params.logoPhoto }}
+            <img data-src="{{ .Site.Params.logoPhoto | relURL }}" class="uk-border-circle" alt="{{ .Site.Title }}" width="250" uk-img>
+        {{ end }}
+
+        <ul class="uk-subnav uk-subnav-divider uk-flex-center uk-visible@m gol-subnav">
+            {{ range .Site.Menus.main }}
+                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
+        {{ with .Content }}
+            <p class="uk-text-justify uk-margin-left uk-margin-right">
+                {{ . }}
+            </p>
+        {{end}}
+        {{ if .Site.Params.pgp }}
+            <p>
+                PGP: {{ .Site.Params.pgp }}
+            </p>
+        {{end}}
+        <p>
+            {{ if .Site.Params.github }}
+                <a href="{{ .Site.Params.github }}" class="uk-margin-small-right" uk-icon="icon: github; ratio: 1.5"></a>
+            {{end}}
+            {{ if .Site.Params.linkedin }}
+                <a href="{{ .Site.Params.linkedin }}" class="uk-margin-small-right" uk-icon="icon: linkedin; ratio: 1.5"></a>
+            {{end}}
+            {{ if .Site.Params.twitter }}
+                <a href="{{ .Site.Params.twitter }}" class="uk-margin-small-right" uk-icon="icon: twitter; ratio: 1.5"></a>
+            {{end}}
+            {{ if .Site.Params.email }}
+                <a href="mailto:{{ .Site.Params.email }}" class="uk-margin-small-right" uk-icon="icon: mail; ratio: 1.5"></a>
+            {{end}}
+        </p>
+    </div>
+</div>
+
+
+<!--search console-->
+<div class="uk-position-medium uk-position-top-right uk-visible@m">
+    <a class="uk-search-toggle" uk-search-icon href="#"></a>
+    <div class="uk-drop" uk-drop="mode: click; pos: left-center; offset: 0">
+        <div class="uk-search uk-search-navbar uk-width-1-1">
+            <input class="uk-search-input" type="search" id="search-input">
+            <div uk-dropdown="mode: click">
+                <div id="hits"></div> <br/>
+                <img class="uk-margin-remove uk-align-right uk-preserve" src="{{`img/algolia-powered-by-8762ce8b.svg` | relURL}}" uk-svg alt="Algolia logo">
+            </div>
+        </div>
+    </div>
+</div>
+<!--end search console-->
+
+<!--menu toggle-->
+<a class="uk-position-medium uk-position-top-right uk-hidden@m" href="#offcanvas" uk-navbar-toggle-icon uk-toggle></a>
+<div id="offcanvas" uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <ul class="uk-nav uk-nav-default">
+            {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+            <li><a class="uk-navbar-toggle" href="#modal-full" uk-search-icon uk-toggle></a></li>
+        </ul>
+
+    </div>
+</div>
+<!--end menu toggle-->
+
+<!--search model-->
+<div id="modal-full" class="uk-modal-full uk-modal" uk-modal>
+    <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport>
+        <button class="uk-modal-close-full" type="button" uk-close></button>
+        <div class="uk-search uk-search-large">
+            <input class="uk-search-input uk-text-center" type="search" id="search-input-sidenav" placeholder="Search..." autofocus>
+            <div id="hits-sidenav"></div> <br/>
+            <img class="uk-margin-remove uk-align-right uk-preserve" src="{{`img/algolia-powered-by-8762ce8b.svg` | relURL}}" uk-svg alt="Algolia logo">
+        </div>
+    </div>
+</div>
+<!--end search model-->
+
+{{ partial "scripts.html" . }}
+</body>
+
+</html>

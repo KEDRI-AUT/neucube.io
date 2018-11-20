@@ -1,0 +1,36 @@
+{{ define "main"}}
+<div class="uk-section uk-section-default">
+    <div class="uk-container uk-container-xsmall uk-text-justify">
+        <article class="uk-article gol-links">
+            <link itemprop="mainEntityOfPage" href="{{ .Permalink }}" />
+            <link itemprop="author" content="{{ .Params.author.firstName }} {{ .Params.author.lastName }}" />
+
+            <h1 class="uk-article-title" itemprop="headline">{{.Title}}</h1>
+
+            <p class="uk-article-meta">{{.PublishDate.Format "January 2, 2006"}} &bullet; {{ range .Params.tags }} <a href="{{ `/tags/` | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{ end }}</p>
+
+            <div class="uk-text-center">
+                <a href="https://plus.google.com/share?url={{ .Permalink }}" uk-icon="icon: google-plus" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
+                <a href="https://www.facebook.com/sharer.php?u={{ .Permalink }}" uk-icon="icon: facebook" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}{{ .Permalink }}" uk-icon="icon: linkedin" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
+                <a href="https://twitter.com/intent/tweet?url={{ .Permalink }}" uk-icon="icon: twitter" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
+                <a href="http://pinterest.com/pin/create/link/?url={{ .Permalink }}" uk-icon="icon: pinterest" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"></a>
+            </div>
+
+            {{.Content}}
+
+        </article>
+
+        <article class="uk-comment gol-links uk-margin-large-top">
+            <div class="uk-comment-body">
+                {{ template "_internal/disqus.html" . }}
+            </div>
+        </article>
+    </div>
+</div>
+{{end}}

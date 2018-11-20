@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+<h1 hidden>{{ .Title }}</h1>
+
+<div class="uk-section uk-section-default gol-links" uk-height-viewport="offset-bottom: 32">
+    <div class="uk-container uk-container-xsmall uk-text-justify">
+
+        {{.Content}}
+
+        <p>Redirecting to <a href="{{ .Params.externalurl }}">{{ .Params.externalurl }}.</a></p>
+
+    </div>
+</div>
+
+{{ end }}

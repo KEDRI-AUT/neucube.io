@@ -1,0 +1,21 @@
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org/",
+      "@type": "Person",
+      {{ if (isset .Params "images") }}
+        "image":"{{ (index .Params.images 0) | absURL }}",
+      {{ else }}
+      "image":"{{ .Site.Params.thumbnailUrl | absURL }}",
+      {{ end }}
+      "honorificPrefix": "{{ .Params.author.prefix }}",
+      "name": "{{ .Params.author.firstName }} {{ .Params.author.lastName }}",
+      "honorificSuffix": "{{ .Params.author.honorarySuffix }}",
+      "jobTitle": "{{ .Params.author.jobTitle }}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{ .Params.author.addressCity }}",
+        "addressCountry": "{{ .Params.author.addressCountry }}"
+      },
+      "email": "mailto:{{ .Params.author.email }}"
+    }
+</script>

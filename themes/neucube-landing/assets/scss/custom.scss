@@ -1,0 +1,155 @@
+$primary: {{ .Site.Params.scss.primary }};
+$secondary: {{ .Site.Params.scss.secondary }};
+$background-color: {{ .Site.Params.scss.backgroundColor }};
+$background-color-light: {{ .Site.Params.scss.backgroundColorLight }};
+$text-color: {{ .Site.Params.scss.textColor }};
+$sub-text-color: {{ .Site.Params.scss.subTextColor }};
+$global-font-family: {{ .Site.Params.scss.globalFontFamily }} !important;
+$label-background-color: {{ .Site.Params.scss.labelBackgroundColor }};
+$label-text-color: {{ .Site.Params.scss.labelTextColor }};
+
+// $primary: #A36441;
+// $secondary: #997953;
+// $background-color: #1d1f21;
+// $background-color-light: #272a2c;
+// $text-color: #c9cacc;
+// $sub-text-color: gray;
+// $global-font-family: 'Space Mono', monospace !important;
+
+
+html {
+    font-family: $global-font-family;
+}
+
+code {
+    font-family: $global-font-family;
+}
+
+body {
+    color: $text-color !important;
+    background-color: $background-color !important;
+    font-size: 1em;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $primary !important;
+    opacity: 1;
+    /* Firefox */
+    text-transform: uppercase;
+    font-size: 0.875rem;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $primary !important;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $primary !important;
+}
+
+.gol-subnav a {
+    color: $primary !important;
+}
+
+/* Hover + Focus */
+.gol-subnav a:hover,
+.gol-subnav a:focus {
+    color: $secondary !important;
+    text-decoration: underline;
+    outline: none;
+}
+
+.gol-subnav> ::before {
+    border-left: 2px solid $primary !important;
+}
+
+.gol-tr-bgcolor {
+    background: $background-color-light
+}
+
+.uk-light {
+    color: $text-color !important;
+}
+
+.uk-section-default {
+    background-color: $background-color !important;
+}
+
+.uk-card-default {
+    background-color: $background-color-light !important;
+}
+
+.uk-link-text {
+    color: $primary !important;
+}
+
+.uk-link-text:hover,
+.uk-link-text:focus {
+    color: $secondary !important;
+}
+
+.uk-label {
+    background-color: $label-background-color !important;
+    font-size: x-small;
+}
+
+.uk-label a {
+    color: $label-text-color !important;
+    font-weight: 700;
+}
+
+.uk-label a:hover,
+.uk-label a:focus {
+    color: $label-text-color !important;
+}
+
+.gol-links a:not(.uk-icon) {
+    color: $text-color !important;
+    text-decoration: none;
+    border-bottom: 2px solid $text-color !important;
+}
+
+.gol-links a:hover:not(.uk-icon),
+.gol-links a:focus:not(.uk-icon) {
+    text-decoration: none;
+    border-bottom: 3px solid $primary !important;
+}
+
+a,
+.uk-link {
+    color: $primary !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover,
+.uk-link:hover {
+    color: $secondary !important;
+}
+
+h2 {
+    color: $secondary !important;
+}
+
+h3 {
+    color: $secondary !important;
+}
+
+h4 {
+    color: $secondary !important;
+}
+
+h1 {
+    color: $secondary !important;
+}
+
+blockquote {
+    color: $sub-text-color !important;
+}
+
+time {
+    color: $sub-text-color;
+}

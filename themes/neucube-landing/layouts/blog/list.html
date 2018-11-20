@@ -1,0 +1,67 @@
+{{ define "main" }}
+
+    <h1 hidden>{{.Title}}</h1>
+
+<div class="uk-grid uk-grid-match" uk-height-viewport="offset-bottom: 32">
+    <div class="uk-width-expand@m">
+        <div class="uk-section uk-section-default">
+            <div class="uk-container uk-container-xsmall uk-text-justify uk-text-break">
+
+                {{ range .Pages.GroupByPublishDate "2006" }}
+                <h2>{{.Key}}</h2>
+                <dl class="uk-description-list gol-links">
+                    {{ range .Pages }}
+                    <dt>
+                        <time datetime="{{.PublishDate}}" itemprop="datePublished" class="uk-text-left">
+                            {{.PublishDate.Format "01-02-2006"}}
+                        </time>
+                    </dt>
+                    <dd>
+                        <a href="{{.Permalink}}">{{.Title}}</a>
+                    </dd>
+                    {{end}}
+                </dl>
+                {{end}}
+            </div>
+        </div>
+    </div>
+    <div class="uk-width-1-5@s">
+        <div class="uk-section uk-section-default">
+            <div class="uk-container uk-container-xsmall">
+                <div>
+                    <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                        <h3 class="uk-card-title">Categories</h3>
+                        <p>
+                            {{ range $key, $value := .Site.Taxonomies.categories }}
+                            <span class="uk-label"> <a href="{{ "/categories/" | relLangURL }}{{$key | urlize}}">{{$key | upper}}</a></span>
+                            {{ end }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="uk-container uk-container-xsmall">
+                <div>
+                    <div class="uk-card uk-card-default uk-card-small uk-card-body">
+                        <h3 class="uk-card-title">Tags</h3>
+                        <p>
+                            {{ $blog := .Site.GetPage "/blog"}}
+                            {{ $slice := slice }}
+                            {{ range $page := $blog.Data.Pages }}
+                                {{ range $tag := $page.Params.tags }}
+                                    {{ $slice = $slice | append $tag }}
+                                {{ end }}
+                            {{ end }}
+
+                            {{ range $uniqueTags := $slice | uniq }}
+                            <span class="uk-label"><a href="{{ "/tags/" | relLangURL }}{{ $uniqueTags | urlize}}">{{ $uniqueTags | upper }}</a></span>
+                            {{ end }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ end }}

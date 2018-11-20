@@ -13,3 +13,9 @@ min_version = "0.51"
 [author]
   name = "Akshay Raj Gollahalli"
   homepage = "https://www.gollahalli.com"
+
+
+[original]
+  name = "Spark"
+  homepage = "https://github.com/akshaybabloo/spark-hugo-theme"
+  repo = "https://github.com/akshaybabloo/spark-hugo-theme"

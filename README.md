@@ -1,6 +1,6 @@
 # NeuCube Homepage
 
-Built on top of [Hugo](https://gohugo.io/).
+Built on top of [Hugo](https://gohugo.io/) 0.51-extended+.
 
 To run locally:
 

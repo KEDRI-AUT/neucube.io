@@ -1,6 +1,6 @@
 baseURL = "http://www.neucube.io/"
 languageCode = "en-us"
-title = "NeuCube: A Brain-Like Artificial Intelligence"
+title = "NeuCube IO"
 theme="neucube-landing"
 
 googleAnalytics = "" # Optional

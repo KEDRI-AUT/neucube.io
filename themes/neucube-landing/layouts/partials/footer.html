@@ -1,14 +1,19 @@
 <div class="uk-section gol-background-dark uk-margin-remove-bottom">
     <div class="uk-container">
-        <p>Copyright &copy; {{.Site.Title}} {{.Site.Params.year}}{{if .Site.Params.acknowledge }} | Theme by <a class="uk-link-text uk-margin-small-left"
-                href="https://github.com/akshaybabloo/spark-hugo-theme">Akshay Raj Gollahalli</a>, generated using <a
-                class="uk-link-text uk-margin-small-left" href="http://hugo.io">Hugo</a>{{ end }}.</p>
+        <div class="uk-grid-match uk-child-width-1-2@m uk-text-center" uk-grid>
+            <div>
+                <p>{{.Site.Params.affiliation}}</p>
+            </div>
+            <div>
+                <p>content goes here</p>
+            </div>
+        </div>
     </div>
 </div>
 <div class="uk-section gol-background-dark uk-margin-remove-bottom uk-padding-small">
     <div class="uk-container uk-text-center">
-        <p>Copyright &copy; {{.Site.Title}} {{.Site.Params.year}}{{if .Site.Params.acknowledge }} | Theme by <a class="uk-link-text uk-margin-small-left"
-                href="https://github.com/akshaybabloo/spark-hugo-theme">Akshay Raj Gollahalli</a>, generated using <a
-                class="uk-link-text uk-margin-small-left" href="http://hugo.io">Hugo</a>{{ end }}.</p>
+        <p>Copyright &copy; {{.Site.Title}} {{.Site.Params.year}}{{if .Site.Params.acknowledge }} | Theme by <a
+                class="uk-link-text uk-margin-small-left" href="https://github.com/akshaybabloo/spark-hugo-theme">Akshay
+                Raj Gollahalli</a>, generated using <a class="uk-link-text uk-margin-small-left" href="http://hugo.io">Hugo</a>{{ end }}.</p>
     </div>
 </div>

@@ -1,3 +1,40 @@
 baseURL = "http://www.neucube.io/"
 languageCode = "en-us"
 title = "NeuCube: A Brain-Like Artificial Intelligence"
+theme="neucube-landing"
+
+googleAnalytics = "" # Optional
+disqusShortname = "" # Optional
+pygmentsCodeFences = true
+enableRobotsTXT = true
+
+[outputFormats]
+  [outputFormats.searchindex]
+    mediaType= "application/json"
+    baseName= "searchindex"
+    isPlainText= true
+
+
+[outputs]
+  home= ["HTML","RSS", "AMP", "searchindex"]
+
+[params]
+    amp = true
+    year = 2018
+    # logoSVG = "img/logo.svg" # # Use logoSVG or logo. Optional
+    # logo = "" # Use logoSVG or logo. Optional
+    logoPhoto = "" # Use logoSVG or logo or logoPhoto. Optional
+    acknowledge = false
+    [params.scss]
+        primary = "#000"
+        secondary = "gray"
+        backgroundColor = "#fff"
+        backgroundColorLight = "#272a2c"
+        backgroundColorDark = "#000"
+        textColor = "#000"
+        textColorLight = "#fff"
+        subTextColor = "gray"
+        # globalFontFamilyURL = "https://fonts.googleapis.com/css?family=Space+Mono:400,700" # Not used yet. See https://github.com/gohugoio/hugo/issues
+        globalFontFamily = "'Roboto Mono', monospace"
+        labelBackgroundColor = "#997953"
+        labelTextColor = "#000"

@@ -25,6 +25,7 @@ enableRobotsTXT = true
     # logo = "" # Use logoSVG or logo. Optional
     logoPhoto = "" # Use logoSVG or logo or logoPhoto. Optional
     acknowledge = false
+    affiliation = "Knowledge Engineering and Discovery Research Institute, AUT University"
     [params.scss]
         primary = "#000"
         secondary = "gray"

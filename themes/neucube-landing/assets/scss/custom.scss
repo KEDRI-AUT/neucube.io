@@ -161,6 +161,10 @@ time {
     color: $text-color-light !important;
 }
 
+.gol-card-shadow {
+    box-shadow: 0 0 18px 5px rgba(0, 0, 0, 0.08);
+}
+
 #particles-js {
     opacity: 1;
     z-index: -10;

@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "neucube-website"
+    "default": "neucube-website",
+    "production": "neucube-website"
   }
 }

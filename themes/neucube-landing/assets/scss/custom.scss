@@ -2,7 +2,9 @@ $primary: {{ .Site.Params.scss.primary }};
 $secondary: {{ .Site.Params.scss.secondary }};
 $background-color: {{ .Site.Params.scss.backgroundColor }};
 $background-color-light: {{ .Site.Params.scss.backgroundColorLight }};
+$background-color-dark: {{ .Site.Params.scss.backgroundColorDark }};
 $text-color: {{ .Site.Params.scss.textColor }};
+$text-color-light: {{ .Site.Params.scss.textColorLight }};
 $sub-text-color: {{ .Site.Params.scss.subTextColor }};
 $global-font-family: {{ .Site.Params.scss.globalFontFamily }} !important;
 $label-background-color: {{ .Site.Params.scss.labelBackgroundColor }};
@@ -27,7 +29,7 @@ code {
 
 body {
     color: $text-color !important;
-    background-color: $background-color !important;
+    // background-color: $background-color !important;
     font-size: 1em;
 }
 
@@ -79,7 +81,7 @@ body {
 }
 
 .uk-card-default {
-    background-color: $background-color-light !important;
+    background-color: $background-color !important;
 }
 
 .uk-link-text {
@@ -131,19 +133,19 @@ a:hover,
 }
 
 h2 {
-    color: $secondary !important;
+    color: $text-color !important;
 }
 
 h3 {
-    color: $secondary !important;
+    color: $text-color !important;
 }
 
 h4 {
-    color: $secondary !important;
+    color: $text-color !important;
 }
 
 h1 {
-    color: $secondary !important;
+    color: $text-color !important;
 }
 
 blockquote {
@@ -152,4 +154,14 @@ blockquote {
 
 time {
     color: $sub-text-color;
+}
+
+.gol-background-dark {
+    background-color: $background-color-dark !important;
+    color: $text-color-light !important;
+}
+
+#particles-js {
+    opacity: 1;
+    z-index: -10;
 }

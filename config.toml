@@ -36,6 +36,6 @@ enableRobotsTXT = true
         textColorLight = "gray"
         subTextColor = "gray"
         # globalFontFamilyURL = "https://fonts.googleapis.com/css?family=Space+Mono:400,700" # Not used yet. See https://github.com/gohugoio/hugo/issues
-        globalFontFamily = "'Roboto Mono', monospace"
+        globalFontFamily = "'Oxygen', sans-serif"
         labelBackgroundColor = "#997953"
         labelTextColor = "#000"

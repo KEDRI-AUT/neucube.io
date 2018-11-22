@@ -120,14 +120,14 @@ body {
     border-bottom: 3px solid $primary !important;
 }
 
-a,
+a:not(.uk-button),
 .uk-link {
     color: $primary !important;
     text-decoration: none;
     cursor: pointer;
 }
 
-a:hover,
+a:hover:not(.uk-button),
 .uk-link:hover {
     color: $secondary !important;
 }
@@ -165,7 +165,24 @@ time {
     box-shadow: 0 0 18px 5px rgba(0, 0, 0, 0.08);
 }
 
+.gol-img-shadow {
+    box-shadow: 0 0 18px 5px rgba(0, 0, 0, 0.08);
+}
+
 #particles-js {
     opacity: 1;
     z-index: -10;
+}
+
+.gol-footer-icons a {
+    color: gray !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.gol-footer-icons a:hover:not(.uk-icon) {
+    color: gray !important;
+    text-decoration: none;
+    border-bottom: 3px solid gray !important;
+    cursor: pointer;
 }

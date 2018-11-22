@@ -4,16 +4,20 @@
             <div>
                 <p>{{.Site.Params.affiliation}}</p>
             </div>
-            <div>
-                <p>content goes here</p>
+            <div class="gol-footer-icons">
+                <p>
+                    <a href="https://twitter.com/kedriaut" uk-icon="twitter"></a>
+                    <a href="https://www.linkedin.com/company/kedriaut/ " uk-icon="linkedin"></a>
+                    <a href="https://www.facebook.com/KEDRIAUT/" uk-icon="facebook"></a>
+                </p>
             </div>
         </div>
     </div>
 </div>
 <div class="uk-section gol-background-dark uk-margin-remove-bottom uk-padding-small">
-    <div class="uk-container uk-text-center">
+    <div class="uk-container uk-text-center gol-footer-icons">
         <p>Copyright &copy; {{.Site.Title}} {{.Site.Params.year}}{{if .Site.Params.acknowledge }} | Theme by <a
                 class="uk-link-text uk-margin-small-left" href="https://github.com/akshaybabloo/spark-hugo-theme">Akshay
-                Raj Gollahalli</a>, generated using <a class="uk-link-text uk-margin-small-left" href="http://hugo.io">Hugo</a>{{ end }}.</p>
+                Raj Gollahalli</a>, generated using <a class="uk-link-text uk-margin-small-left" href="http://hugo.io">Hugo</a>{{ end }} - <a href="{{ ref . "privacy-policy.md" }}">Privacy Policy</a>.</p>
     </div>
 </div>

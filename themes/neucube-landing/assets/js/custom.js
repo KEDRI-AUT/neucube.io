@@ -108,3 +108,67 @@ particlesJS("particles-js", {
     },
     "retina_detect": true
 });
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCqkinZ05lkvK0ENls4DEksfIYJV-3LnVk",
+    authDomain: "neucube-website.firebaseapp.com",
+    databaseURL: "https://neucube-website.firebaseio.com",
+    projectId: "neucube-website",
+    storageBucket: "neucube-website.appspot.com",
+    messagingSenderId: "921741648327"
+  };
+  firebase.initializeApp(config);
+
+  var db = firebase.firestore();
+
+// Disable deprecated features
+db.settings({
+  timestampsInSnapshots: true
+});
+
+var emailIdButton = document.getElementById("emailIdButton");
+var emailId = document.getElementById("emaildId");
+
+// var spinnerRef = document.getElementById("spinnerRef")
+// var checkRef = document.getElementById("checkRef")
+var spinner = "<div uk-spinner></div>";
+var tick = '<span uk-icon="icon: check"></span>';
+
+var resetText = "";
+var resetToButtonPrimary = "";
+var resetRemoveButtonSuccess = "";
+// var spinner = '<div class="uk-icon circle-loader" id="spinnerRef"><div class="checkmark draw" id="checkRef"></div></div>';
+
+// Timer
+// var delay = ( function() {
+//     var timer = 0;
+//     return function(callback, ms) {
+//         clearTimeout (timer);
+//         timer = setTimeout(callback, ms);
+//     };
+// })();
+
+emailIdButton.onclick = function(){
+
+    emailIdButton.innerHTML = spinner;
+
+    db.collection("coming-soon-email-ids").add({
+        emailID: emailId.value,
+        date: new Date().toISOString()
+    })
+    .then(function(docRef) {
+        emailIdButton.innerHTML = tick;
+        emailIdButton.classList.remove("uk-button-primary")
+        emailIdButton.classList.add("gol-button-success")
+
+        // Delay for timer
+        // delay(function(){
+        //     console.log("hello")
+        // }, 5000 ); // end delay
+    })
+    .catch(function(error) {
+        emailIdButton.innerHTML = tick;
+        console.error("Error adding document: ", error);
+    })
+};

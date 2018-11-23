@@ -26,6 +26,7 @@ enableRobotsTXT = true
     logoPhoto = "" # Use logoSVG or logo or logoPhoto. Optional
     acknowledge = false
     affiliation = "Knowledge Engineering and Discovery Research Institute, AUT University"
+    address = "2 Wakefield Street,<br>Auckland CBD, Auckland - 1010<br>New Zealand."
     [params.scss]
         primary = "#000"
         secondary = "gray"

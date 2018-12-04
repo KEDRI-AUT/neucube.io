@@ -1,0 +1,8 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /coming-soon-email-ids/{document=**} {
+      allow write;
+      allow read, update, delete: if request.auth.uid == !null;
+    }
+  }
+}

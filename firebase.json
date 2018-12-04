@@ -1,11 +1,57 @@
 {
   "hosting": {
     "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "cleanUrls": true,
+    "headers": [
+      {
+        "source": "**/*.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=0, no-cache"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(jpg|jpeg|gif|png|ico|svg|JPG)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=864000"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(css|js|xsl)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=864000"
+          }
+        ]
+      },
+      {
+        "source": "404.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=864000"
+          }
+        ]
+      }
     ],
-    "cleanUrls": true
+    "redirects": [
+      {
+        "source": "/blog/part-11-car-nd-detect-road-lanes-using-computer-vision-and-python-3",
+        "destination": "/blog/part-1-1-car-nd-detect-road-lanes-using-computer-vision-and-python-3/",
+        "type": 301
+      },
+      {
+        "source": "/blog/part-12-car-nd-masking-and-colouring-a-region-of-the-image",
+        "destination": "/blog/part-1-2-car-nd-masking-and-colouring-a-region-of-the-image/",
+        "type": 301
+      }
+    ]
   }
 }

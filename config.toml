@@ -20,7 +20,7 @@ enableRobotsTXT = true
 
 [params]
     amp = true
-    year = 2018
+    year = 2019
     # logoSVG = "img/logo.svg" # # Use logoSVG or logo. Optional
     # logo = "" # Use logoSVG or logo. Optional
     logoPhoto = "" # Use logoSVG or logo or logoPhoto. Optional

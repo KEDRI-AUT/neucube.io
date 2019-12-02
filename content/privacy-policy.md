@@ -8,36 +8,59 @@ sitemap:
   changeFreq: monthly
 ---
 
-## What Are Cookies?
+1. PURPOSE:
 
-As is common practice with almost all professional websites this site uses cookies, which are tiny files that are downloaded to your computer, to improve your experience. This page describes what information they gather, how we use it and why we sometimes need to store these cookies. we will also share how you can prevent these cookies from being stored however this may downgrade or 'break' certain elements of the sites functionality.
+The purpose of this Policy is to establish procedures and guidelines for:
 
-For more general information on cookies see the Wikipedia article on HTTP Cookies...
+a) The collection, use and disclosure of personal information by the NeuCube Cloud; and
+b) Access by individuals to Personal Information held by the NeuCube Cloud.
 
-## How we Use Cookies?
+2. POLICY:
 
-we use cookies for a variety of reasons detailed below. Unfortunately, in most cases there are no industry standard options for disabling cookies without completely disabling the functionality and features they add to this site. It is recommended that you leave on all cookies if you are not sure whether you need them or not in case they are used to provide a service that you use.
+The procedures for the collection, use and disclosure of Personal Information and the access to and correction of, Personal Information and the use of unique identifiers must comply with the Principles of Privacy Act 1993.
 
-## Disabling Cookies
+All requests made under the Official Information Act 1982 are deemed to be a request made pursuant to with section 1(b) of Principle 6 of the Privacy Act 1993. The NeuCube Cloud will comply with the General Data Protection Regulation ("GDPR") if you are located in the European Union.
 
-You can prevent the setting of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be aware that disabling cookies will affect the functionality of this and many other websites that you visit. Disabling cookies will usually result in also disabling certain functionality and features of this site. Therefore it is recommended that you do not disable cookies.
+3. DEFINITIONS:
 
-## The Cookies we Set
+Employee: means an individual employed by the NeuCube Cloud and for the purposes of this Policy extends to current and past employees of the NeuCube Cloud.
 
-To provide you with a great experience on this site we provide the functionality to set your preferences for how this site runs when you use it. To remember your preferences we need to set cookies so that this information can be called whenever you interact with a page is affected by your preferences.
+Personal Information: means information about an identifiable individual. The fact that person is employed by the NeuCube Cloud in a particular position, and his or her name is a matter of public record and not information subject to the requirements of this Policy. Student: means a person who has applied to enrol, or a person who is enrolled at the NeuCube Cloud.
 
-## Third Party Cookies
+4. SCOPE:
 
-In some special cases we also use cookies provided by trusted third parties. The following section details which third party cookies you might encounter through this site.
+All Employees and people and organisations who are contracted to work at the NeuCube Cloud. 
 
-This site uses Google Analytics, which is one of the most widespread and trusted analytics solution on the web for helping us to understand how you use the site and ways that we can improve your experience. These cookies may track things such as how long you spend on the site and the pages that you visit so we can continue to produce engaging content.
+5. RELEVANT LEGISLATION:
 
-For more information on Google Analytics cookies, see the official Google Analytics page.
+Privacy Act 1993 - http://www.legislation.govt.nz/act/public/1993/0028/latest/DLM296639.html
+Official Information Act
+http://www.legislation.govt.nz/act/public/1982/0156/latest/DLM64785.html
+General Data Protection Regulation
+https://gdpr-info.eu/
 
-From time to time we test new features and make subtle changes to the way that the site is delivered. When we are still testing new features these cookies may be used to ensure that you receive a consistent experience while on the site while ensuring we understand which optimisations our users appreciate the most.
+6. LEGAL COMPLIANCE:
 
-we also use social media buttons and/or plugins on this site that allow you to connect with your social network in various ways. For these to work the following social media sites including; LinkedIn, Facebook and Twitter, will set cookies through our site which may be used to enhance your profile on their site or contribute to the data they hold for various purposes outlined in their respective privacy policies.
+The NeuCube Cloud is an organisation subject to the Official Information Act 1982. Accordingly the NeuCube Cloud must comply with that legislation in dealing with requests for information.
 
-## More Information
+The NeuCube Cloud is an Agency for the purposes of the Privacy Act 1993. Accordingly the NeuCube Cloud must comply with that legislation in relation to Personal Information held by the NeuCube Cloud.
 
-Hopefully that has clarified things for you and as was previously mentioned if there is something that you aren't sure whether you need or not it's usually safer to leave cookies enabled in case it does interact with one of the features you use on our site. However if you are still looking for more information, then you can contact me through one of our preferred contact methods.
+The NeuCube Cloud must comply with the GDPR when dealing with personal data subjects residing in the European Union.
+
+7. RELATED PROCEDURES / DOCUMENTS:
+
+* Procedure for the Collection, Use and Disclosure of Personal Information (referred to as Procedures in this Policy)
+* Recruitment and Appointment of Staff
+* Equal Employment Opportunities
+* Health and Safety
+* Allied Staff Grading and Promotion
+* Academic Promotions
+
+8. RESPONSIBILITY:
+
+Privacy Officers are responsible for ensuring that the NeuCube Cloud’s obligations under the Privacy Act 1993 are met and for working with the Privacy Commissioner to develop appropriate protocols, policies and procedures.
+
+9. Data Retention and Usage
+
+* Your data is yours, we do not share any information of yours or your organisation unless required by the law.
+* Once you or your organisation deletes their account, your data is instantly removed.

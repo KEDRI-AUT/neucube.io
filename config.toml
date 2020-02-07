@@ -1,4 +1,4 @@
-baseURL = "http://www.neucube.io/"
+baseURL = "https://www.neucube.io/"
 languageCode = "en-us"
 title = "NeuCube IO"
 theme="neucube-landing"
